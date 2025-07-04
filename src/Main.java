@@ -1,12 +1,37 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main (String[] args){
-        System.out.println("I lived lives, tried to play both sides");
-        System.out.println("But I couldn't find my own place");
-        System.out.println("Called a problem child 'cause I got too wild");
-        System.out.println("But that's how I'm getting paid");
-        System.out.println("on stage");
-        System.out.println("I'm done hidin now I'm shining")
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.println("Enter your age: ");
+        int age = scanner.nextInt();
+
+        System.out.println("What is your gpa: ");
+        double gpa = scanner.nextDouble();
+
+        System.out.println("Are you a student? (true/false): ");
+        boolean isStudent = scanner.nextBoolean();
+
+        System.out.println("Hello " + name);
+        System.out.println("You are " + age + " years old");
+        System.out.println("Your gpa is " + gpa);
+
+        if(isStudent){
+            System.out.println("You are enrolled as a student");
+        } else {
+            System.out.println("You are NOT enrolled");
+        }
+
+        System.out.println("Student: " + isStudent);
+
+
+        scanner.close();
 
 
     }
