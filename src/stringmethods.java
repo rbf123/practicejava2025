@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class stringmethods {
 
     public static void main (String[] args){
 
