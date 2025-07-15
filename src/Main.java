@@ -4,60 +4,37 @@ public class Main {
 
     public static void main (String[] args){
 
-      Scanner scan = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-      System.out.println("Please enter your name: ");
-      String name =  scan.nextLine();
+        String email;
+        String username;
+        String domain;
 
-      int length = name.length(); // length of name
-      char letter = name.charAt(0); // letter or character at that value
-      int index = name.indexOf(letter); // find the index
-      int lastIndex = name.lastIndexOf(letter); // find the last index or where is that exactly
+        System.out.print("Enter your email: ");
 
+        // .substring() = method used to extract a portion of a string .substring(start, end)
 
-      name = name.toUpperCase();
-      System.out.println(name);
+        email = scanner.nextLine();
 
-      name = name.toLowerCase();
-      System.out.println(name);
+        // String username = email.substring(0, 6); //2nd index is exclusive
 
-      name = name.trim(); // removes whitespace
+       if (email.contains("@")){
 
-      name = name.replace("u", "a"); // changes char
+           username = email.substring(0, email.indexOf("@"));
+           // String domain = email.substring(7,16); // don't necessarily need end index
+           domain = email.substring(email.indexOf("@") + 1); // don't necessarily need end index
 
-
-        if (name.isEmpty()){
-
-          System.out.println("Your name is empty");
-      } else {
-          System.out.println("Your name is " + name);
-      }
-
-      //check if string contains a character
-
-      if (name.contains(" ")) {
-          System.out.println("Your name contains spaces");
-      } else {
-          System.out.println("Your name doesn't contain spaces");
-      }
+           System.out.println(username);
+           System.out.println(domain);
+       } else {
+           System.out.println("Emails must contain @");
+       }
 
 
 
 
-      if (name.equals("password")){
-          System.out.println("Your name can't be password");
-      } else {
-          System.out.println("Hello " + name);
-      }
+        scanner.close();
 
-
-
-      System.out.println(length);
-
-
-
-
-        scan.close();
 
 
     }
