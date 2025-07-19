@@ -2,43 +2,77 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main (String[] args) throws InterruptedException {
+    public static void main (String[] args) {
 
-        //for loop = execute some code a CERTAIN amount of times
-        // for (initialization or counter usually named i ; condition you want to stop; update to your counter)
+        //nested loop = a loop inside another loop, used often with matrices of DS&A
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter the number seconds to count down from:");
+        int rows;
+        int columns;
+        char symbol;
 
-        int start = scanner.nextInt();
+        System.out.print("Enter the # of rows: ");
+        rows = scanner.nextInt();
+        System.out.print("Enter the # of columns: ");
+        columns = scanner.nextInt();
+        System.out.print("Enter the symbol: ");
+        symbol = scanner.next().charAt(0);
 
-        for(int i = start; i > 0; i--){
-            System.out.println(i);
-            Thread.sleep(1000);
+
+        for (int i = 1; i <= rows; i++) {
+            for(int j = 0; j < columns; j++){
+                System.out.print(symbol);
+            }
+            System.out.println();
         }
 
-        System.out.println("HAPPY NEW YEAR!");
 
 
-       scanner.close();
 
+        scanner.close();
 
 
 
         /*
-        System.out.print("Enter how many times you want to loop:");
-        int max = scanner.nextInt();
+        for (int i = 1; i <= 3; i++){
+            for(int j = 1; j <= 9; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
 
-        for(int i = 0; i <= max; i++ ){
-            System.out.println(i);
         }
 
-        /*
-        for (int i = 0; i <= 10; i+=2){
-            System.out.println(i);
+
+
+
+
+        for(int i = 1; i <= 9; i++) {
+        System.out.print(i + " ");
         }
-        */
+        System.out.println();
+        for(int i = 1; i <= 9; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        for(int i = 1; i <= 9; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
+        // break = break out of a loop (STOP)
+        //continue = skip current iteration of a loop (SKIP)
+
+
+        for (int i = 0; i < 10; i++){
+            if(i == 5){
+                continue;
+            }
+
+            System.out.print(i + " ");
+        }
+
+         */
 
         }
 
