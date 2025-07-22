@@ -12,31 +12,31 @@ public class Main {
 
         // Object = An entity that holds data (attributes) and can perform actions (methods), reference data type
         // constructor = A special method to initialize objects, you can pass arguments to a constructor and set up initial value
+        // overloaded constructors = Allow a class to have multiple constructors with different parameter lists,
+        //                            enable objects to be initialized in various ways
 
-        Student student1 = new Student("Spongebob", 30, 3.2);
-        Student student2 = new Student("Patrick", 34, 1.5);
-        Student student3 = new Student("Sandy", 27, 4.0);
+        User user1 = new User("Spongebob");
+        User user2 = new User("Patrick", "pstar@aol.com");
+        User user3 = new User("Sandy", "scheeks@gmail.com", 27);
+        User user4 = new User();
 
-        student1.study();
-        student2.study();
-        student3.study();
 
-        /*
-        System.out.println(student1.name);
-        System.out.println(student1.age);
-        System.out.println(student1.gpa);
-        System.out.println(student1.isEnrolled);
+        System.out.println(user1.username);
+        System.out.println(user1.email);
+        System.out.println(user1.age);
 
-        System.out.println(student2.name);
-        System.out.println(student2.age);
-        System.out.println(student2.gpa);
-        System.out.println(student2.isEnrolled);
+        System.out.println(user2.username);
+        System.out.println(user2.email);
+        System.out.println(user2.age);
 
-        System.out.println(student3.name);
-        System.out.println(student3.age);
-        System.out.println(student3.gpa);
-        System.out.println(student3.isEnrolled);
-        */
+        System.out.println(user3.username);
+        System.out.println(user3.email);
+        System.out.println(user3.age);
+
+        System.out.println(user4.username);
+        System.out.println(user4.email);
+        System.out.println(user4.age);
+
     }
 
 
