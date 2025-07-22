@@ -9,22 +9,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-      // static = Keyword, Makes a variable or method belong ot th class rather than to any specific object
-        // commonly used for utility methods or shared resources
+      // Inheritance = One class inherits the attributes and methods from another class
+        // child <- parent
 
-        Friend friend1 = new Friend("Spongebob");
-        Friend friend2 = new Friend("Plankton");
-        Friend friend3 = new Friend("Squidward");
-        Friend friend4 = new Friend("Bob");
-        Friend friend5 = new Friend("Sally");
+        Circle circle = new Circle(3);
+        Triangle triangle = new Triangle(4,5);
+        Rectangle rectangle = new Rectangle(6,7);
 
-        System.out.println(friend1.numOfFriends);
-        System.out.println(friend2.numOfFriends);
-        System.out.println(friend3.numOfFriends);
+        System.out.println(circle.area());
+        System.out.println(triangle.area());
+        System.out.println(rectangle.area());
 
-        Friend.showFriends();
+        //circle.display();
+        //triangle.display();
+        //rectangle.display();
 
-        System.out.println(Math.round(3.78));
+
     }
 
 
